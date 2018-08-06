@@ -922,8 +922,6 @@ client.on('message', message => {
       **${prefix}bc** → to send message to all members of the server
       
       **${prefix}role** →  to give a person rank
-     
-`)
 
      prefix = ${prefix}
      ping = ${Date.now() - message.createdTimestamp}
