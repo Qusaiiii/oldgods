@@ -890,8 +890,7 @@ client.on('message', message => {
      **${prefix}avatar** → your avatar
 
      **${prefix}credit** → your credits
- 
-     **${prefix}daily** → Daily balance
+
        
      **${prefix}trans** → to transfer credits to another person
      `)
