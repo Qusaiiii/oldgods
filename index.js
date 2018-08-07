@@ -177,7 +177,7 @@ client.on("message", message => {
   let command = message.content.split(" ")[0];
   
   if (command === "!!mute") {
-        if (!message.member.hasPermission('MANAGE_ROLES')) return message.reply("** لا يوجد لديك برمشن 'Manage Roles' **").catch(console.error);
+        if (!message.member.hasPermission('MANAGE_ROLES')) return message.reply("** no permissions'Manage Roles' **").catch(console.error);
   let user = message.mentions.users.first();
   let modlog = client.channels.find('name', 'mute-log');
   let muteRole = client.guilds.get(message.guild.id).roles.find('name', 'Muted');
@@ -190,7 +190,7 @@ client.on("message", message => {
     .addField('muted:', `${user.username}#${user.discriminator} (${user.id})`)
     .addField('By:', `${message.author.username}#${message.author.discriminator}`)
    
-   if (!message.guild.member(client.user).hasPermission('MANAGE_ROLES_OR_PERMISSIONS')) return message.reply('** لا يوجد لدي برمشن Manage Roles **').catch(console.error);
+   if (!message.guild.member(client.user).hasPermission('MANAGE_ROLES_OR_PERMISSIONS')) return message.reply('** no permissions Manage Roles **').catch(console.error);
  
   if (message.guild.member(user).roles.has(muteRole.id)) {
 return message.reply("**:white_check_mark: .. a member has been muted**").catch(console.error);
@@ -277,7 +277,7 @@ client.on('message', function(message) {
         if (args.length == 0) {
             let play_info = new Discord.RichEmbed()
                 .setAuthor(client.user.username, client.user.avatarURL)
-                .setFooter('طلب بواسطة: ' + message.author.tag)
+                .setFooter('request by: ' + message.author.tag)
                 .setDescription('**usage: #play {name/link of song}**')
             message.channel.sendEmbed(play_info)
             return;
