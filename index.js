@@ -272,7 +272,7 @@ client.on('message', function(message) {
     const args = message.content.split(' ').slice(1).join(' ');
 
     if (mess.startsWith(prefix + 'play')) {
-        if (!message.member.voiceChannel) return message.channel.send(':no_entry: || **__يجب ان تكون في روم صوتي__**');
+        if (!message.member.voiceChannel) return message.channel.send(':no_entry: || **__you are not in voice channel__**');
         // if user is not insert the URL or song title
         if (args.length == 0) {
             let play_info = new Discord.RichEmbed()
@@ -328,7 +328,7 @@ client.on('message', function(message) {
         }
     }
     else if (mess.startsWith(prefix + 'skip')) {
-        if (!message.member.voiceChannel) return message.channel.send(':no_entry: || **__يجب ان تكون في روم صوتي__**');
+        if (!message.member.voiceChannel) return message.channel.send(':no_entry: || **__you are not in voice channel__**');
         message.channel.send('`✔`').then(() => {
             skip_song(message);
             var server = server = servers[message.guild.id];
@@ -356,7 +356,7 @@ client.on('message', function(message) {
         });
     }
     else if (mess.startsWith(prefix + 'stop')) {
-        if (!message.member.voiceChannel) return message.channel.send(':no_entry: || **__يجب ان تكون في روم صوتي__**');
+        if (!message.member.voiceChannel) return message.channel.send(':no_entry: || **__you are not in a voice  channel__**');
         message.channel.send('`✔`');
         var server = server = servers[message.guild.id];
         if (message.guild.voiceConnection) message.guild.voiceConnection.disconnect();
