@@ -879,10 +879,11 @@ client.on("message", message => {
       let command = message.content.split(" ")[0];
       command = command.slice(prefix.length);
         if(command === "svstats") {
-        const image = new Discord.Attachment(`https://cache.gametracker.com/server_info/93.119.26.115:27015/b_560_95_1.png`);
+        const image = new Discord.Attachment(`https://cache.gametracker.com/server_info/93.119.26.115:27015/`, "b_560_95_1.png");
     message.channel.send(image)
         }
     });
+
 
 
  client.on('message', message => {
