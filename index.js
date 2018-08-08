@@ -879,8 +879,6 @@ client.on('message', message => {
      .addField(`**__General Commands__**`,`
      **${prefix}server** → server info
      
-     **${prefix}user** → your info
-      
      **${prefix}sug** → give us your suggestions !
 
      **${prefix}members** → members info
@@ -889,10 +887,6 @@ client.on('message', message => {
 
      **${prefix}avatar** → your avatar
 
-     **${prefix}credit** → your credits
-
-       
-     **${prefix}trans** → to transfer credits to another person
      `)
      .addField(`**__Music commands__**`,`
       **${prefix}play** →  play a song
