@@ -872,6 +872,19 @@ client.on('message', message => {
 }
 });
 
+  
+client.on("message", message => {
+    var prefix = "#"
+    if (!message.content.startsWith(prefix)) return;
+      let command = message.content.split(" ")[0];
+      command = command.slice(prefix.length);
+        if(command === "svstats") {
+        const image = new Discord.Attachment(`https://cache.gametracker.com/server_info/93.119.26.115:27015/b_560_95_1.png`);
+    message.channel.send(image)
+        }
+    });
+
+
  client.on('message', message => {
      if (message.content === prefix +"help") {
     const embed = new Discord.RichEmbed()
