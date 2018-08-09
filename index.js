@@ -42,11 +42,6 @@ if (!channel) return;
 channel.send({embed : embed});
 });
 
-
-
-      });
-
-
 client.on("message", message => {
               var args = message.content.substring(prefix.length).split(" ");
               if (message.content.startsWith(prefix + "clear")) {
